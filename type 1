@@ -1,0 +1,47 @@
+#include<iostream>
+
+using namespace std;
+/*
+//Function overloading for the different parameters and different returntypes..
+
+int larger(int n1,int n2)
+{
+	return (n1>n2) ?n1 :n2;
+}
+float larger(float n1,float n2)
+{
+	return (n1>n2) ?n1 :n2;
+}
+char larger(char n1,char n2)
+{
+	return (n1>n2) ?n1 :n2;
+}
+*/
+
+//using templates...for different parameters and different returntypes..
+
+template <class T>
+T larger(T n1,T n2)
+{
+	return(n1>n2)?n1:n2;
+}
+
+int main()
+{
+	int a,b;
+	float c,d;
+	char e,f;
+	cout<<"Enter two integer:";
+	cin>>a>>b;
+	cout<<"\nLarger is "<<larger(a,b);
+	
+	cout<<"\n\nEnter two float type number:";
+	cin>>c>>d;
+	cout<<"\nLarger is "<<larger(c,d);
+	
+	cout<<"\n\nEnter two characters:";
+	cin>>e>>f;
+	cout<<"\nLarger is "<<larger(e,f);
+		
+	return 0;
+}
